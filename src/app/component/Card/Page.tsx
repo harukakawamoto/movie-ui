@@ -1,3 +1,5 @@
+"use client";
+
 import { View } from "./View";
 import { useProps } from "./useProps";
 import { Props } from "./useProps";
