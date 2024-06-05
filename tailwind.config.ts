@@ -17,7 +17,7 @@ const config: Config = {
       colors: {
         "main-bar-gray": "#484644",
         "main-red": "#E50914",
-        "main-grey": "#5D5C5A",
+        "main-gray": "#5D5C5A",
       },
     },
   },
