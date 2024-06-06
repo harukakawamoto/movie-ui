@@ -17,6 +17,7 @@ export type AxiosResponse = {
   loading: boolean;
   error: AxiosError | null | Error | null;
 };
+
 export const useProps = (): AxiosResponse => {
   const [movieList, setMovieList] = useState<MovieList[]>([]);
   const [loading, setLoading] = useState<boolean>(true);

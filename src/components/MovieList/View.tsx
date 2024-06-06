@@ -1,5 +1,5 @@
 "use client";
-import { MovieList } from "@/components/MovieList/useProps";
+
 import { Page as Card } from "@/components/Card/Page";
 import { AxiosResponse } from "@/components/MovieList/useProps";
 
@@ -13,7 +13,7 @@ export const View = (props: AxiosResponse) => {
   }
 
   return (
-    <div>
+    <div className="flex">
       {props.movieList.map((movie) => (
         <div key={movie.movieId}>
           <Card
