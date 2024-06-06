@@ -1,5 +1,9 @@
 import type { Preview } from "@storybook/react";
-import "../src/app/globals.css";
+import "@/app/globals.css";
+import { initialize, mswLoader } from "msw-storybook-addon";
+import { handlers } from "../src/mocks/handlers";
+
+initialize();
 
 const preview: Preview = {
   parameters: {
@@ -9,7 +13,13 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    viewport: { defaultViewport: "iphone14promax" },
+    msw: {
+      handlers: handlers,
+    },
   },
+
+  loaders: [mswLoader],
 };
 
 export default preview;

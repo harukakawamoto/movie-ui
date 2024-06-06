@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Page } from "@/app/component/Card/Page";
+import { Page } from "@/components/Card/Page";
 
 const meta: Meta<typeof Page> = {
   title: "Card",

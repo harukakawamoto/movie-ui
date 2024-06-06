@@ -3,7 +3,7 @@ import { IoMdHome } from "react-icons/io";
 import { IoTicketSharp, IoPersonCircleOutline } from "react-icons/io5";
 import { isPage } from "./useProps";
 
-export default function Footer(props: isPage) {
+export const View = (props: isPage) => {
   return (
     <div className="h-20 max-w-sm bg-main-bar-gray flex justify-around items-center text-4xl ">
       <IoMdHome className={props.isHome ? "text-main-red" : "text-main-gray"} />
@@ -15,4 +15,4 @@ export default function Footer(props: isPage) {
       />
     </div>
   );
-}
+};
