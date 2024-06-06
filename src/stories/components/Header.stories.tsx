@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Page } from "@/components/MovieList/Page";
+import { Page } from "@/components/Header/Page";
 
 const meta: Meta<typeof Page> = {
-  title: "MovieList",
+  title: "Header",
   component: Page,
 };
 
@@ -10,4 +10,4 @@ export default meta;
 
 type Story = StoryObj<typeof Page>;
 
-export const MovieList: Story = {};
+export const Header: Story = {};

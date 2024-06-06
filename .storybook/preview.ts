@@ -13,7 +13,7 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    viewport: { defaultViewport: "iphone14promax" },
+
     msw: {
       handlers: handlers,
     },

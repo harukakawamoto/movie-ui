@@ -13,9 +13,9 @@ export const View = (props: AxiosResponse) => {
   }
 
   return (
-    <div className="flex">
+    <div className="flex ">
       {props.movieList.map((movie) => (
-        <div key={movie.movieId}>
+        <div key={movie.movieId} className=" ">
           <Card
             title={movie.movieName}
             screeningTime={movie.screeningTime}

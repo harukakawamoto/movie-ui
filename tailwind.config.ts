@@ -17,11 +17,11 @@ const config: Config = {
       },
       colors: {
         "main-bar-gray": "#484644",
+        "main-black": "#373634",
         "main-red": "#E50914",
         "main-gray": "#5D5C5A",
       },
     },
   },
-  plugins: [],
 };
 export default config;
