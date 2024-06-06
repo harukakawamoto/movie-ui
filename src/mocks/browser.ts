@@ -6,6 +6,3 @@ worker.start({
   onUnhandledRequest: "bypass", // or 'warn', 'error'
   quiet: false, // Enables verbose logging
 });
-if (process.env.NODE_ENV === "development") {
-  worker.start();
-}
