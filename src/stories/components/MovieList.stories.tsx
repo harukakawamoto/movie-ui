@@ -11,10 +11,4 @@ export default meta;
 
 type Story = StoryObj<typeof Page>;
 
-export const MovieList: Story = {
-  // parameters: {
-  //   msw: {
-  //     handlers,
-  //   },
-  // },
-};
+export const MovieList: Story = {};
