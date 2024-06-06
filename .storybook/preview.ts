@@ -1,5 +1,9 @@
 import type { Preview } from "@storybook/react";
-import "../src/app/globals.css";
+import "@/app/globals.css";
+import { initialize, mswLoader } from "msw-storybook-addon";
+import { DiVim } from "react-icons/di";
+
+initialize();
 
 const preview: Preview = {
   parameters: {
@@ -10,6 +14,7 @@ const preview: Preview = {
       },
     },
   },
+  loaders: [mswLoader],
 };
 
 export default preview;
