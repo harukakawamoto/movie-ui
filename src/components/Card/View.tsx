@@ -11,7 +11,7 @@ export type Props = {
 
 export const View = (props: Props) => {
   return (
-    <div className="bg-main-gray w-64 h-[450px] rounded-2xl relative">
+    <div className="bg-main-gray w-64 h-[470px] rounded-2xl relative mr-4 ml-4 select-none drag-none">
       <div className="absolute top-0 left-0 h-16 w-16 bg-main-red rounded-tl-2xl flex items-center justify-center">
         <p className="text-white text-2xl font-bold">{props.ViewingDate}</p>
       </div>
@@ -22,6 +22,7 @@ export const View = (props: Props) => {
           width={256}
           height={256}
           className="rounded-t-2xl "
+          draggable="false"
         />
       </div>
 

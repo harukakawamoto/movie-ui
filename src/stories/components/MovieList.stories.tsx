@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Page } from "@/components/MovieList/Page";
-import { handlers } from "@/mocks/handlers";
 
 const meta: Meta<typeof Page> = {
   title: "MovieList",
