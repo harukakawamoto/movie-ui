@@ -2,18 +2,19 @@
 
 import { Page as Card } from "@/components/Card/Page";
 import { AxiosResponse } from "@/components/MovieList/useProps";
-
+import { Page as ErrorCard } from "@/components/ErrorCard/Page";
+import { Page as LoadingCard } from "@/components/LoadingCard/Page";
 export const View = (props: AxiosResponse) => {
   if (props.loading) {
-    return <div>Loading...</div>;
+    return <LoadingCard />;
   }
 
   if (props.error) {
-    return <div>Error: {props.error.message}</div>;
+    return <ErrorCard />;
   }
 
   return (
-    <div className="flex ">
+    <div className="flex">
       {props.movieList.map((movie) => (
         <div key={movie.movieId} className=" ">
           <Card
