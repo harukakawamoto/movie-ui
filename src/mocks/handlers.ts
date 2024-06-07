@@ -1,8 +1,9 @@
-import { http, HttpResponse } from "msw";
+import { delay, http, HttpResponse } from "msw";
 
 export const handlers = [
   // 映画履歴の全件取得
-  http.get(`${process.env.NEXT_PUBLIC_API_URL}/movies`, () => {
+  http.get(`${process.env.NEXT_PUBLIC_API_URL}/movies`, async () => {
+    await delay(3000);
     return HttpResponse.json([
       {
         movieId: 1,
