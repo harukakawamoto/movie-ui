@@ -2,7 +2,4 @@ import { setupWorker } from "msw/browser";
 import { handlers } from "./handlers";
 
 export const worker = setupWorker(...handlers);
-worker.start({
-  onUnhandledRequest: "bypass", // or 'warn', 'error'
-  quiet: false, // Enables verbose logging
-});
+// worker.start();
