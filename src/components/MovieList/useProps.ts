@@ -3,7 +3,7 @@
 import axios, { AxiosError } from "axios";
 import { useEffect, useState } from "react";
 
-export type MovieList = {
+export type Movie = {
   movieId: number;
   movieName: string;
   screeningTime: number;
@@ -13,13 +13,13 @@ export type MovieList = {
 };
 
 export type AxiosResponse = {
-  movieList: MovieList[];
+  movieList: Movie[];
   loading: boolean;
   error: AxiosError | null | Error | null;
 };
 
 export const useProps = (): AxiosResponse => {
-  const [movieList, setMovieList] = useState<MovieList[]>([]);
+  const [movieList, setMovieList] = useState<Movie[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<AxiosError | null | Error>(null);
 
@@ -28,7 +28,7 @@ export const useProps = (): AxiosResponse => {
       setLoading(true); // リクエスト開始時にローディング状態を設定
 
       try {
-        const response = await axios.get<MovieList[]>(
+        const response = await axios.get<Movie[]>(
           `${process.env.NEXT_PUBLIC_API_URL}/movies`
         );
         setMovieList(response.data);
