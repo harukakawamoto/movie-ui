@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ["image.tmdb.org"], // ここに他の許可されたドメインも追加できます
+  },
   webpack: (config, { isServer }) => {
     if (isServer) {
       // next server build => ignore msw/browser

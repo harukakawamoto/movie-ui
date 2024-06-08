@@ -1,10 +1,13 @@
 import axios from "axios";
+import { MovieInfo, SearchMovie } from "../type/MovieType";
 
 const BASE_URL = "https://api.themoviedb.org/3";
 const API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY;
-
+const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 // 映画検索関数
-async function searchMovie(movieTitle: string): Promise<SearchMovie[] | null> {
+export async function searchMovie(
+  movieTitle: string
+): Promise<SearchMovie[] | null> {
   try {
     // 映画のタイトルで検索
     const searchResponse = await axios.get(`${BASE_URL}/search/movie`, {
@@ -16,7 +19,6 @@ async function searchMovie(movieTitle: string): Promise<SearchMovie[] | null> {
 
     if (searchResponse.data.results.length === 0) {
       console.log("Movie not found");
-      return null;
     }
 
     let movieSearchResultList: SearchMovie[] = [];
@@ -27,7 +29,7 @@ async function searchMovie(movieTitle: string): Promise<SearchMovie[] | null> {
         id: movie.id,
         title: movie.title,
         release_date: movie.release_date,
-        thumbnail: movie.thumbnail,
+        poster_path: IMAGE_BASE_URL + movie.poster_path,
       });
     });
 
@@ -39,18 +41,17 @@ async function searchMovie(movieTitle: string): Promise<SearchMovie[] | null> {
 }
 
 // 特定の映画情報を取得する関数
-async function getMovieInfo(movieId: string): Promise<Movie | null> {
+export async function getMovieInfo(movieId: number): Promise<MovieInfo | null> {
   try {
     // 映画のタイトルで検索
     const searchResponse = await axios.get(`${BASE_URL}/movie/${movieId}`, {
       params: {
         api_key: API_KEY,
+        language: "ja-JP",
       },
     });
-
-    if (searchResponse.data.results.length === 0) {
+    if (!searchResponse.data) {
       console.log("Movie not found");
-      return null;
     }
 
     const movie = searchResponse.data;

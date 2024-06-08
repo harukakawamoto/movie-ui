@@ -1,14 +1,14 @@
-interface Movie {
+export type MovieInfo = {
   title: string;
   overview: string;
   runtime: number;
   release_date: string;
   thumbnail: string;
-}
+};
 
-interface SearchMovie {
+export type SearchMovie = {
   id: number;
   title: string;
   release_date: string;
-  thumbnail: string;
-}
+  poster_path: string;
+};
