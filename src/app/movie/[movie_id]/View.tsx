@@ -1,5 +1,5 @@
-import { MovieInfo } from "../../../type/MovieType";
+import { Page as MovieDetail } from "@/components/MovieDetail/page";
 
-export const View = (movieInfo: MovieInfo) => {
-  return <div>{movieInfo.overview}</div>;
+export const View = () => {
+  return <MovieDetail />;
 };

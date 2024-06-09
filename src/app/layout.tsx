@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <body className={`${inter.className} h-full flex flex-col bg-main-black`}>
         <Header />
-        <main className="flex-grow flex items-center justify-center relative">
+        <main className="my-24 flex items-center justify-center relative">
           {children}
         </main>
         <Footer />

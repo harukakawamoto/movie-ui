@@ -4,11 +4,11 @@ import { Props } from "./useProps";
 export const View: React.FC<Props> = (props) => {
   return (
     <div
-      className="flex flex-col"
+      className="flex flex-col mb-40 z-0"
       style={{ maxWidth: "100vw", overflowX: "hidden" }}
     >
       <div
-        className="bg-white border-2 p-2 relative rounded-xl flex"
+        className="bg-white border-2 p-2 relative rounded-xl flex m-4"
         style={{ position: "sticky", top: 0, zIndex: 1000 }}
       >
         <span className="flex justify-end items-center text-gray-500 p-2">
