@@ -28,9 +28,7 @@ export const useProps = (): AxiosResponse => {
       setLoading(true); // リクエスト開始時にローディング状態を設定
 
       try {
-        const response = await axios.get<Movie[]>(
-          `${process.env.NEXT_PUBLIC_API_URL}/movies`
-        );
+        const response = await axios.get<Movie[]>("/api/movies/getAll");
         setMovieList(response.data);
       } catch (error) {
         if (axios.isAxiosError(error)) {

@@ -13,6 +13,7 @@ export async function searchMovie(
     const searchResponse = await axios.get(`${BASE_URL}/search/movie`, {
       params: {
         api_key: API_KEY,
+        language: "ja-JP",
         query: movieTitle,
       },
     });

@@ -1,5 +1,5 @@
 import { searchMovie as Search, getMovieInfo } from "@/util/getMovieInfo";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { SearchMovie } from "../../type/MovieType";
 
 export type Props = {
@@ -13,7 +13,6 @@ export const useProps = () => {
   const [movieName, setMovieName] = useState<string>("");
 
   const onClickMovieHandler = async () => {
-    console.log(movieName);
     const searchResponse = await Search(movieName);
     if (!searchResponse) {
       return;

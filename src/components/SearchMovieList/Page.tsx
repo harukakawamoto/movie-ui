@@ -13,7 +13,7 @@ export const Page: React.FC<SearchMovieListProps> = ({ movieList }) => {
   return (
     <div className="flex">
       {movieList.map((movie) => (
-        <Link href={`movie/${movie.id}`} key={movie.id}>
+        <Link href={`search/movie/${movie.id}`} key={movie.id}>
           <div className="">
             <SearchMovieCard
               title={movie.title}

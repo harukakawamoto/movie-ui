@@ -1,13 +1,13 @@
+import { formattedMovieInfo } from "@/type/MovieType";
 import Image from "next/image";
-import { formattedMovieInfo } from "./useProps";
 export const View = (movieInfo: formattedMovieInfo) => {
   return (
-    <div className="block overflow-auto mb-40">
+    <div className="block overflow-auto pb-40">
       <div className="text-white text-center">
         <Image
           src={movieInfo.thumbnail}
           alt="ポスター画像"
-          width={200}
+          width={256}
           height={256}
           className="mx-auto rounded-2xl"
         />
@@ -20,6 +20,19 @@ export const View = (movieInfo: formattedMovieInfo) => {
           {movieInfo.overview}
         </div>
       </div>
+      {movieInfo.isResister ? (
+        <div className="m-8 text-white">
+          <div className="pb-2">
+            <p>視聴予定時刻</p>
+            <input
+              type="datetime-local"
+              onChange={movieInfo.onChange}
+              value={movieInfo.startTime}
+            />
+          </div>
+          <button onClick={movieInfo.onClick}>登録する</button>
+        </div>
+      ) : null}
     </div>
   );
 };

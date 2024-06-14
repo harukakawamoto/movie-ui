@@ -1,8 +1,8 @@
 "use client";
 
+import { formattedMovieInfo } from "@/type/MovieType";
 import { View } from "./View";
-import { useProps } from "./useProps";
 
-export const Page = () => {
-  return <View {...useProps()} />;
+export const Page = (props: formattedMovieInfo) => {
+  return <View {...props} />;
 };
