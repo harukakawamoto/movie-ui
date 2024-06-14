@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+ 
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Movie {
+  id             Int      @id @default(autoincrement()) 
+  movieId        Int      
+  movieName      String   
+  screeningTime  Int    
+  startTime      String   
+  overview       String?  
+  thumbnail      String   
+
+  @@map("movies") // テーブル名が "movies" であることを指定します（必要に応じて変更）
+}
+
+
+

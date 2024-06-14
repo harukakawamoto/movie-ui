@@ -16,6 +16,6 @@ export const Card: Story = {
     thumbnail:
       "https://image.tmdb.org/t/p/w500/3daOEMQCOGU2n9EbUC0PICnUCek.jpg",
     screeningTime: 115,
-    startDate: new Date(2024, 5, 1, 14, 0),
+    startDate: new Date(2024, 11, 31, 14, 0),
   },
 };

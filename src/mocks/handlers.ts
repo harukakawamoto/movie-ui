@@ -9,7 +9,7 @@ export const handlers = [
         movieId: 1,
         movieName: "鬼滅の刃",
         screeningTime: 115,
-        startTime: new Date(2024, 6, 5).toISOString(),
+        startTime: new Date(2024, 12, 25).toISOString(),
         overview: "",
         thumbnail:
           "https://image.tmdb.org/t/p/w500/3daOEMQCOGU2n9EbUC0PICnUCek.jpg",
@@ -27,7 +27,7 @@ export const handlers = [
         movieId: 3,
         movieName: "Spider-man Home comming",
         screeningTime: 130,
-        startTime: new Date(2024, 6, 11).toISOString(),
+        startTime: new Date(2024, 12, 31).toISOString(),
         overview: "",
         thumbnail:
           "https://image.tmdb.org/t/p/w500/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg",
